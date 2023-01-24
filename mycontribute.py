@@ -102,7 +102,7 @@ def arguments(argsval):
                         from 1 to N times a day. The exact number of commits
                         is defined randomly for each day. The default value
                         is 10.""")
-    parser.add_argument('-fr', '--frequency', type=int, default=10,
+    parser.add_argument('-fr', '--frequency', type=int, default=30,
                         required=False, help="""Percentage of days when the
                         script performs commits. If N is specified, the script
                         will commit N%% of days in a year. The default value
@@ -112,14 +112,14 @@ def arguments(argsval):
                         repository. If specified, the script pushes the changes
                         to the repository. The link is accepted in SSH or HTTPS
                         format. For example: git@github.com:user/repo.git or
-                        https://github.com/GithubRealFan/ninja-trader-8.git""")
+                        https://github.com/GithubRealFan/FlaskRestApiPython""")
     parser.add_argument('-un', '--user_name', type=str, required=False, default="GithubRealFan",
                         help="""Overrides user.name git config.
                         If not specified, the global config is used.""")
     parser.add_argument('-ue', '--user_email', type=str, required=False, default="christianlee92227@gmail.com",
                         help="""Overrides user.email git config.
                         If not specified, the global config is used.""")
-    parser.add_argument('-da', '--days_ago', type=int, required=False, default=40,
+    parser.add_argument('-da', '--days_ago', type=int, required=False, default=100,
                         help="""Show them if you want to contribute a few days in advance.""")
     parser.add_argument('-sd', '--start_date', type=str, required=False,
                         help="""Start Date.""")
